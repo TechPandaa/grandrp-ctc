@@ -2,7 +2,6 @@
 
 // Database Stuff
 $databaseDirectory = __DIR__."/database";
-systeminc('database');
 
 // Get the language functions
 $language = $system_language;
@@ -10,6 +9,11 @@ $language = $system_language;
 systeminc('language');
 $_language = new Language;
 $_language->set_language($language);
+
+// -- SITE VARIABLE -- //
+
+if(isset($_GET['site'])) $site = $_GET['site'];
+else $site = 'homepage';
 
 // -- Template Function -- //
 

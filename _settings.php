@@ -23,7 +23,7 @@ function systeminc($file)
 
 /** General Settings */
 $version = '0.1-Alpha';
-$sitename = 'Grand RP - Car Thief Calculator';
+$sitename = 'Car Thief Calculator';
 $system_language = 'de';
 
 ?>

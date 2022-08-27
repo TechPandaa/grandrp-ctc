@@ -1,0 +1,23 @@
+.button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+    background: var(--grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.button.primary {
+    background: var(--primary);
+    border-color: var(--primary-hover);
+    color: var(--white);
+}
+
+.button.primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+}
