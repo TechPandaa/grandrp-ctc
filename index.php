@@ -22,7 +22,7 @@ $_language->read_module('index');
     </div>
     <div id="content">
         <header>
-            <div class="container flex flex-nowrap flex-space-between flex-center">
+            <div class="container flex flex-nowrap flex-space-between flex-align-center">
                 <div id="logo">
                     <a href="index.php">
                         <img src="static/img/grandrp-logo.svg" alt="Grand RP Logo">
@@ -32,11 +32,14 @@ $_language->read_module('index');
                         </div>
                     </a>
                 </div>
-                <?php include_once('user.php'); ?>
+                <?php 
+                    if($_SESSION['loggedin']){
+                        include('user.php'); 
+                    }
+                ?>
             </div>
         </header>
         <main>
-            <div class="container">
             <?php
                 if(!isset($site)) $site="homepage";
                 $invalide = array('\\','/','/\/',':','.');
@@ -44,13 +47,12 @@ $_language->read_module('index');
                 if(!file_exists($site.".php")) $site = "homepage";
                 include($site.".php");
             ?>
-            </div>
         </main>
         <footer>
             <div class="container">
                 <div id="footer-left">
                     <div id="copyright">
-                        Copyright &copy; <?php echo date('Y'); ?> <a href="https://twitter.com/techpandaa">@TechPandaa</a> - <?php echo $_language->module['rights']; ?>
+                        Copyright &copy; <?php echo date('Y'); ?> <a href="https://twitter.com/techpandaa">@TechPandaa</a> - <?php $_language->read_module('index'); echo $_language->module['rights']; ?>
                     </div>
                     <div id="version">
                         Version <span class="secondary"><?php echo $version; ?></span>

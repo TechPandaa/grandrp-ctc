@@ -1,0 +1,57 @@
+div#content > div.container > div#login {
+    width: 20vw;
+    height: 100vh;
+}
+
+div#content > div.container > div#login > div#logo {
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+div#content > div.container > div#login > div#logo img {
+    height: 100%;
+    margin-right: 20px;
+}
+
+div#content > div.container > div#login > div#logo > div#sitename {
+    font-size: 1.5rem;
+}
+
+div#content > div.container > div#login > form#login {
+    height: 30vh;
+    width: 100%;
+    background: var(--dark-grey);
+    border: 2px solid var(--grey);
+    border-radius: 4px;
+}
+
+div#content > div.container > div#login > form#login label {
+    width: 80%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div#content > div.container > div#login > form#login input[type=text], input[type=password] {
+    width: 80%;
+    font-size: 1.1rem;
+    text-align: center;
+    background: var(--white);
+    border: 2px solid var(--light-grey);
+    border-radius: 4px;
+    padding: 5px 0px;	
+}
+
+div#content > div.container > div#login > form#login input[type=submit] {
+    width: 40%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white);
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    padding: 5px 0px;	
+}

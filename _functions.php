@@ -1,7 +1,13 @@
 <?php 
 
+require_once "./vendor/autoload.php";
+
+// Get all Session information about the loggedin admin
+session_start();
+
 // Database Stuff
 $databaseDirectory = __DIR__."/database";
+
 
 // Get the language functions
 $language = $system_language;
@@ -14,6 +20,11 @@ $_language->set_language($language);
 
 if(isset($_GET['site'])) $site = $_GET['site'];
 else $site = 'homepage';
+
+// -- Action Variable -- //
+
+if(isset($_GET['action'])) $action = $_GET['action'];
+else $action = '';
 
 // -- Template Function -- //
 
@@ -34,6 +45,14 @@ if(stristr($_SERVER['PHP_SELF'],"/admin/") == false){
 }
 else{
 	define('PAGETITLE', $GLOBALS['hp_title']);
+}
+
+// -- RANDOM PASSWORD CREATION -- //
+
+function new_password($length){
+    $bytes = openssl_random_pseudo_bytes($length);
+    $password = bin2hex($bytes);
+    return $password;
 }
 
 // -- Current Year -- //

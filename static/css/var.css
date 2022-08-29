@@ -5,7 +5,7 @@
     --grey: #5E5E5E;
     --light-grey: #9E9E9E;
     --primary: #476CFF;
-    --primary-hover: #243680;
+    --primary-hover: #4061E6;
     --secondary: #FFD047;
     --secondary-hover: #E6BC40;
 }
@@ -60,6 +60,14 @@
     justify-content: space-between;
 }
 
-.flex-center {
+.flex-space-even {
+    justify-content: space-evenly;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
     align-items: center;
 }

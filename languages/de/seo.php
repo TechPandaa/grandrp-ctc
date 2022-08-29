@@ -5,7 +5,8 @@ $language_array = Array(
 /* 'variable' => 'Bedeutung' */
 
     'car' => 'Car',
-    'homepage' => 'Homepage'
+    'homepage' => 'Homepage',
+    'login' => 'Login',
 
 );
 

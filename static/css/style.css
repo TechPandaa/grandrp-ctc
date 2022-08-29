@@ -2,6 +2,7 @@
 @import url('../fonts/akrobat/akrobat-font.css');
 @import url('var.css');
 @import url('buttons.css');
+@import url('login.css');
 
 .container {
     width: 50vw;
@@ -21,6 +22,7 @@ a, a:active, a:focus, a:visited {
 }
 
 a:hover {
+    color: var(--primary-hover);
     text-decoration: underline;
 }
 
@@ -31,7 +33,7 @@ div#background {
     left: 0;
     position: absolute;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.3;
     overflow: hidden;
 }
 
@@ -91,6 +93,84 @@ header > div.container > nav > ul {
     margin: 0px;
     list-style: none;
     display: flex;
+}
+
+div#sub-header {
+    height: 20px;
+    background-color: var(--grey);
+    padding: 10px 0px;
+}
+
+div#sub-header > div.container > nav {
+    height: 20px;
+    width: 100%;
+}
+
+div#sub-header > div.container > nav > ul {
+    height: 20px;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+main > div.container.search {
+    height: 60vh;
+}
+
+main > div.container > form#search {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div.container > form#search label {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+main > div.container > form#search input[type=text] {
+    height: 20px;
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    background: var(--white);
+    border: 2px solid var(--light-grey);
+    border-radius: 4px;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+
+main > div.container > form#search input[type=submit] {
+    height: 40px;
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin-right: 20px;
+}
+
+main > div.container > form#search input[type=submit]:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+main > div.container > form#search > div#buttons > a {
+    height: 40px;
+    text-decoration: none;
+    padding: 7px 20px;
 }
 
 footer {

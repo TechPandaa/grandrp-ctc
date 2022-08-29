@@ -13,6 +13,10 @@ switch ($GLOBALS['site']) {
         define('PAGETITLE', settitle($_language->module['car']));
     break;
 
+    case 'login':
+        define('PAGETITLE', settitle($_language->module['login']));
+    break;
+
     default:
         define('PAGETITLE', settitle($_language->module['homepage']));
     break;
