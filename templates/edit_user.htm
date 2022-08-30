@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="page-background flex flex-column">
+        <div class="title">
+            <h4>
+                <span><i class="primary rotate-52 fa-solid fa-slash"></i></span>
+                <span class="uppercase">%users%</span>
+                <span class="uppercase">>> %edit%</span>
+            </h4>
+        </div>
+        <form class="flex flex-wrap flex-space-even" action="admin.php?site=users&action=save" method="post">
+            <div class="form-row">
+                <label for="name">%name%</label>
+                <input type="text" name="name" id="name" value="$name">
+            </div>
+            <div class="form-row">
+                <label for="email">%email%</label>
+                <input type="text" name="email" id="email" value="$email">
+            </div>
+
+
+            <input type="hidden" name="last" value="edit">
+            <input type="hidden" name="id" value="$userID">
+            <input type="submit" value="%submit%">
+        </form>
+    </div>
+</div>

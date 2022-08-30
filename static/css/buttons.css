@@ -10,25 +10,30 @@
     transition: all 0.4s ease-in-out;
 }
 
-.button.primary {
+.button.small {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.button.primary, .button.small.primary {
     background: var(--primary);
     border-color: var(--primary-hover);
     color: var(--white);
 }
 
-.button.primary:hover {
+.button.primary:hover, .button.small.primary:hover {
     background: var(--primary-hover);
     border-color: var(--primary);
     text-decoration: none;
 }
 
-.button.secondary {
+.button.secondary, .button.small.secondary {
     background: var(--secondary);
     border-color: var(--secondary);
     color: var(--white);
 }
 
-.button.secondary:hover {
+.button.secondary:hover, .button.small.secondary:hover {
     background: var(--secondary-hover);
     border-color: var(--secondary-hover);
     text-decoration: none;

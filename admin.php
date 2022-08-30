@@ -43,8 +43,9 @@ if (!isset($_SESSION['loggedin'])) {
         </header>
         <div id="sub-header">
             <div class="container">
-                <nav>
-                    <ul>
+                <nav class="flex flex-wrap flex-nowrap">
+                    <span class="uppercase bold"><?php echo $_language->module['admin']; ?></span>
+                    <ul class="flex flex-wrap flex-nowrap">
                         <li>
                             <a href="admin.php?site=manufacturers"><?php echo $_language->module['manufacturers']; ?></a>
                         </li>

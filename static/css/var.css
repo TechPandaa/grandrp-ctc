@@ -52,6 +52,10 @@
     flex-wrap: nowrap;
 }
 
+.flex-wrap {
+    flex-direction: wrap;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -70,4 +74,26 @@
 
 .flex-align-center {
     align-items: center;
+}
+
+/* Rotate Stuff */
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.rotate-55 {
+    transform: rotate(55deg);
+}
+
+.rotate-52 {
+    transform: rotate(52deg);
+}
+
+.rotate-50 {
+    transform: rotate(50deg);
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
 }
