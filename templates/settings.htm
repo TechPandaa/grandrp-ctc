@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="page-background flex flex-column">
+        <div class="title">
+            <h4>
+                <span><i class="primary rotate-52 fa-solid fa-slash"></i></span>
+                <span class="uppercase">%settings%</span>
+                <span class="uppercase">>> %edit%</span>
+            </h4>
+        </div>
+        <form class="flex flex-wrap flex-wrap-wrap" action="admin.php?site=settings&action=save" method="post">
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="sitename">%sitename%</label>
+                <input type="text" name="sitename" id="sitename" value="$sitename">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="version">%version%</label>
+                <input type="text" name="version" id="version" value="$version">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="language">%default_language%</label>
+                <input type="text" name="language" id="language" value="$system_language">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="password_length">%password_length%</label>
+                <input type="text" name="password_length" id="password_length" value="$password_length">
+            </div>
+            <input class="uppercase" type="submit" value="%submit%">
+        </form>
+    </div>
+</div>

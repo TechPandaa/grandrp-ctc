@@ -15,7 +15,12 @@ div.list > div.list-head > div.head-row {
     text-align: center;
 }
 
-div.list Y> div.list-entry {
-    height: 40px;
-    width: 100%;
+div.list > div.list-entry {
+    min-height: 60px;
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+}
+
+div.list > div.list-entry:nth-child(2n) {
+    background-color: var(--grey);
 }

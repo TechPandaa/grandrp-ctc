@@ -34,10 +34,11 @@ div#content > div.container > div#login > form#login label {
     text-transform: uppercase;
 }
 
-div#content > div.container > div#login > form#login input[type=text], input[type=password] {
+div#content > div.container > div#login > form#login input[type=text], form#login input[type=password] {
     width: 80%;
     font-size: 1.1rem;
     text-align: center;
+    color: var(--black);
     background: var(--white);
     border: 2px solid var(--light-grey);
     border-radius: 4px;

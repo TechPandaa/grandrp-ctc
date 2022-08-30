@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="page-background flex flex-column">
+        <div class="title">
+            <h4>
+                <span><i class="primary rotate-52 fa-solid fa-slash"></i></span>
+                <span class="uppercase">%manufacturers%</span>
+                <span class="uppercase">>> %new%</span>
+            </h4>
+        </div>
+        <form class="flex flex-wrap flex-wrap-wrap" enctype="multipart/form-data" action="admin.php?site=manufacturers&action=save" method="post">
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="name">%name%</label>
+                <input type="text" name="name" id="name" placeholder="Übermacht">
+            </div>
+            <div class="form-row flex flex-column">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="icon">%icon%</label>
+                <input type="file" name="icon" id="icon">
+            </div>
+            <div class="form-row flex flex-column">
+            </div>
+            <input type="hidden" name="last" value="new">
+            <input class="uppercase" type="submit" value="%save%">
+        </form>
+    </div>
+</div>

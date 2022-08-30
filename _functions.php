@@ -1,14 +1,5 @@
 <?php 
 
-require_once "./vendor/autoload.php";
-
-// Get all Session information about the loggedin admin
-session_start();
-
-// Database Stuff
-$databaseDirectory = __DIR__."/database";
-
-
 // Get the language functions
 $language = $system_language;
 

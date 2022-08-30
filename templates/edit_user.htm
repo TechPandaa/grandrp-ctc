@@ -7,16 +7,21 @@
                 <span class="uppercase">>> %edit%</span>
             </h4>
         </div>
-        <form class="flex flex-wrap flex-space-even" action="admin.php?site=users&action=save" method="post">
-            <div class="form-row">
+        <form class="flex flex-wrap flex-wrap-wrap" action="admin.php?site=users&action=save" method="post">
+            <div class="form-row flex flex-column">
                 <label for="name">%name%</label>
                 <input type="text" name="name" id="name" value="$name">
             </div>
-            <div class="form-row">
+            <div class="form-row flex flex-column">
                 <label for="email">%email%</label>
                 <input type="text" name="email" id="email" value="$email">
             </div>
-
+            <div class="form-row flex flex-column">
+                <label for="password">%password%</label>
+                <input type="password" name="password" id="password" placeholder="%password%">
+            </div>
+            <div class="form-row flex flex-column">
+            </div>
 
             <input type="hidden" name="last" value="edit">
             <input type="hidden" name="id" value="$userID">

@@ -48,16 +48,20 @@
     display: flex;
 }
 
-.flex-nowrap {
-    flex-wrap: nowrap;
-}
-
 .flex-wrap {
     flex-direction: wrap;
 }
 
 .flex-column {
     flex-direction: column;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
 }
 
 .flex-space-between {

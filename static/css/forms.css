@@ -1,3 +1,19 @@
+form {
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+
 form > div.form-row {
-    width: 50;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+form > div.form-row:nth-child(2n) {
+    width: calc(50% - 20px);
+    margin-left: 20px;
+}
+
+form > div.form-row label {
+    color: var(--secondary);
+    margin-bottom: 20px;
 }

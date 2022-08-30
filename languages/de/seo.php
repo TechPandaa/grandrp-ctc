@@ -11,6 +11,7 @@ $language_array = Array(
     'manufacturer' => 'Hersteller',
     'manufacturers' => 'Hersteller',
     'overview' => 'Übersicht',
+    'settings' => 'Einstellungen',
     'user' => 'Benutzer',
     'users' => 'Benutzer'
 

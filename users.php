@@ -10,6 +10,9 @@ use SleekDB\Store;
 $userStore = new Store('users', $databaseDirectory);
 
 if($action == 'new'){
+
+    $password = new_password($password_length);
+
     eval ("\$new_user = \"".gettemplate("new_user", "htm")."\";");
     echo $new_user;
 }elseif($action == 'edit'){
@@ -32,12 +35,35 @@ if($action == 'new'){
 }elseif($action == 'save'){
     if($_POST['last'] == 'new'){
 
+        $grandID = $_POST['grandid'];
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+        $newUser = [
+            "grandID" => "$grandID",
+            "name" => "$name",
+            "email" => "$email",
+            "password" => "$passwordHash",
+        ];
+
+        $newUser = $userStore->insert($newUser);
+
+        header('Location: admin.php?site=users&status=created');
+
     }elseif($_POST['last'] == 'edit'){
         $name = $_POST['name'];
         $email = $_POST['email'];
+        $password = $_POST['password'];
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         $id = $_POST['id'];
 
-        $userStore->updateById($id, ["name" => "$name", "email" => "$email"]);
+        $userStore->updateById($id, [
+            "name" => "$name", 
+            "email" => "$email", 
+            "password" => "$passwordHash"
+        ]);
 
         header('Location: admin.php?site=users&status=edited');
 
