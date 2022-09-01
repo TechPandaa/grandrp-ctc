@@ -44,8 +44,6 @@ if ($count > 0) {
     } else {
       echo 'Incorrect GrandID!';
   }
-}else {
-    echo 'Kommen wir hier raus?';
 }
 
 ?>

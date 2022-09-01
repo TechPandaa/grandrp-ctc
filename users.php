@@ -7,7 +7,7 @@ if(isset($_GET['userID'])) $userID = $_GET['userID'];
 else $userID = '';
 
 use SleekDB\Store;
-$userStore = new Store('users', $databaseDirectory);
+$userStore = new Store('users', $databaseDirectory, $configuration);
 
 if($action == 'new'){
 

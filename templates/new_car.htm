@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="page-background flex flex-column">
+        <div class="title">
+            <h4>
+                <span><i class="primary rotate-52 fa-solid fa-slash"></i></span>
+                <span class="uppercase">%cars%</span>
+                <span class="uppercase">>> %new%</span>
+            </h4>
+        </div>
+        <form class="flex flex-wrap flex-wrap-wrap" enctype="multipart/form-data" action="admin.php?site=manufacturers&action=save" method="post">
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="name">%name%</label>
+                <input type="text" name="name" id="name" placeholder="Audi R8">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="name">%handle%</label>
+                <input type="text" name="handle" id="handle" placeholder="audir8">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="year">%year%</label>
+                <input type="text" name="year" id="year" placeholder="2012">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="manufacturers">%manufacturers%</label>
+                <input list="manufacturers" name="manufacturer" id="manufacturer" placeholder="%choose%">
+                $manufacturers
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="value">%value%</label>
+                <input type="text" name="value" id="value" placeholder="2000000">
+            </div>
+            <div class="form-row flex flex-column"></div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="picture">%picture%</label>
+                <input type="file" name="picture" id="picture">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="copyright">%copyright%</label>
+                <input type="text" name="value" id="copyright" placeholder="Audi Sport GmbH">
+            </div>
+            <input type="hidden" name="last" value="new">
+            <input class="uppercase" type="submit" value="%save%">
+        </form>
+    </div>
+</div>

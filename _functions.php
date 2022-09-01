@@ -7,6 +7,10 @@ systeminc('language');
 $_language = new Language;
 $_language->set_language($language);
 
+
+// -- Additional Database Functions -- //
+systeminc('database');
+
 // -- SITE VARIABLE -- //
 
 if(isset($_GET['site'])) $site = $_GET['site'];
@@ -36,6 +40,15 @@ if(stristr($_SERVER['PHP_SELF'],"/admin/") == false){
 }
 else{
 	define('PAGETITLE', $GLOBALS['hp_title']);
+}
+
+// Slug Generator for URLS und Dropdown Menus
+
+function generateSlug($string)
+{
+    $string=strtolower($string);
+	$slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
+    return $slug;
 }
 
 // -- RANDOM PASSWORD CREATION -- //

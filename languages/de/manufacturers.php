@@ -3,6 +3,8 @@
 $language_array = Array(
 
     'actions' => 'Optionen',
+    'current_logo' => 'Aktuelles Logo',
+    'edit' => 'Bearbeiten',
     'icon' => 'Icon',
     'manufacturers' => 'Hersteller',
     'name' => 'Name',

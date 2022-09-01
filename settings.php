@@ -4,7 +4,7 @@
 $_language->read_module('settings');
 
 use SleekDB\Store;
-$settingsStore = new Store('settings', $databaseDirectory);
+$settingsStore = new Store('settings', $databaseDirectory, $configuration);
 
 if ($_SESSION['grandID'] == '19246'){
 

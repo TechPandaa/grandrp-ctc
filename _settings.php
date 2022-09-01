@@ -8,6 +8,13 @@ session_start();
 // Database Stuff
 $databaseDirectory = __DIR__."/database";
 
+$configuration = [
+    "auto_cache" => true,
+    "cache_lifetime" => null,
+    "timeout" => false // deprecated! Set it to false!
+
+  ];
+
 // -- ERROR REPORTING -- //
 define('DEBUG', "ON"); // ON = development-mode | OFF = public mode
 if (DEBUG === 'ON') {
@@ -30,7 +37,7 @@ function systeminc($file)
 }
 
 use SleekDB\Store;
-$settingsStore = new Store('settings', $databaseDirectory);
+$settingsStore = new Store('settings', $databaseDirectory, $configuration);
 
 $settings = $settingsStore->findAll();
 

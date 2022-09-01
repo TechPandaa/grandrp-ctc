@@ -24,3 +24,11 @@ div.list > div.list-entry {
 div.list > div.list-entry:nth-child(2n) {
     background-color: var(--grey);
 }
+
+div.list > div.list-entry > div.list-row-img {
+    height: 40px;
+}
+
+div.list > div.list-entry > div.list-row-img img {
+    height: 80%;
+}
