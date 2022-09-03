@@ -14,6 +14,7 @@ form > div.form-row:nth-child(2n) {
 }
 
 form > div.form-row label {
+    width: 100%;
     color: var(--secondary);
     margin-bottom: 20px;
 }

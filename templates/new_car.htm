@@ -7,7 +7,7 @@
                 <span class="uppercase">>> %new%</span>
             </h4>
         </div>
-        <form class="flex flex-wrap flex-wrap-wrap" enctype="multipart/form-data" action="admin.php?site=manufacturers&action=save" method="post">
+        <form class="flex flex-wrap flex-wrap-wrap" enctype="multipart/form-data" action="admin.php?site=cars&action=save" method="post">
             <div class="form-row flex flex-column">
                 <label class="uppercase bold" for="name">%name%</label>
                 <input type="text" name="name" id="name" placeholder="Audi R8">
@@ -29,7 +29,18 @@
                 <label class="uppercase bold" for="value">%value%</label>
                 <input type="text" name="value" id="value" placeholder="2000000">
             </div>
-            <div class="form-row flex flex-column"></div>
+            <div class="form-row flex flex-wrap flex-wrap-wrap flex-space-even flex-align-center">
+                <label class="uppercase bold" for="misc">%extras%</label>
+                <div class="flex flex-wrap flex-nowrap flex-align-center">
+                    <input type="checkbox" name="dlc" id="dlc">%dlc%
+                </div>
+                <div class="flex flex-wrap flex-nowrap flex-align-center">
+                    <input type="checkbox" name="gconly" id="gconly">%gc_only%
+                </div>
+                <div class="flex flex-wrap flex-nowrap flex-align-center">
+                    <input type="checkbox" name="lottery" id="lottery">%lottery%
+                </div>
+            </div>
             <div class="form-row flex flex-column">
                 <label class="uppercase bold" for="picture">%picture%</label>
                 <input type="file" name="picture" id="picture">
