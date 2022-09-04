@@ -17,6 +17,41 @@ if($action == 'new'){
     eval ("\$new_car = \"".gettemplate("new_car", "htm")."\";");
     echo $new_car;
 }elseif($action == 'edit'){
+    $carID = $_GET['carID'];
+    $car = $carsStore->findById($carID);
+
+    $name = $car['name'];
+    $handle = $car['handle'];
+    $year = $car['attributes']['year'];
+    $value = $car['attributes']['value'];
+
+    $manufacturer = $car['attributes']['manufacturer'];
+    $manufacturers = createDatalist('manufacturers', NULL, NULL);
+
+    $dlc = $car['extras']['dlc'];
+    $gconly = $car['extras']['gconly'];
+    $lottery = $car['extras']['lottery'];
+
+    if($dlc == 'on'){
+        $dlc = 'checked';
+    }else{
+        $dlc = '';
+    }
+
+    if($gconly == 'on'){
+        $gconly = 'checked';
+    }else{
+        $gconly = '';
+    }
+
+    if($lottery == 'on'){
+        $lottery = 'checked';
+    }else{
+        $lottery = '';
+    }
+
+    $copyright = $car['graphics']['copyright'];
+
     eval ("\$edit_car = \"".gettemplate("edit_car", "htm")."\";");
     echo $edit_car;
 }elseif($action == 'save'){
@@ -27,9 +62,9 @@ if($action == 'new'){
         $manufacturer = $_POST['manufacturer'];
         $value = $_POST['value'];
 
-        $dlc = $_POST['dlc'];
-        $gconly = $_POST['gconly'];
-        $lottery = $_POST['lottery'];
+        $dlc = $_POST['extras']['dlc'];
+        $gconly = $_POST['extras']['gconly'];
+        $lottery = $_POST['extras']['lottery'];
 
         $picture = $_FILES['picture'];
         $file_ext=strtolower(mb_substr($picture['name'], strrpos($picture['name'], ".")));
@@ -41,7 +76,6 @@ if($action == 'new'){
             $picture = $file;
 
         }
-
         $copyright = $_POST['copyright'];
 
         $newCar = [
@@ -66,6 +100,49 @@ if($action == 'new'){
 
         header('Location: admin.php?site=cars&status=created');
     }elseif($_POST['last'] == 'edit'){
+        $carID = $_POST['carID'];
+        $name = $_POST['name'];
+        $handle = $_POST['handle'];
+        $year = $_POST['year'];
+        $manufacturer = $_POST['manufacturer'];
+        $value = $_POST['value'];
+
+        $dlc = $_POST['dlc'];
+        $gconly = $_POST['gconly'];
+        $lottery = $_POST['lottery'];
+
+        $picture = $_FILES['picture'];
+        $file_ext=strtolower(mb_substr($picture['name'], strrpos($picture['name'], ".")));
+        if($file_ext==".png" OR $file_ext==".jpg") {
+            move_uploaded_file($picture['tmp_name'], $filepath.$picture['name']);
+            @chmod($filepath.$picture['name'], 0755);
+            $file = $handle.$file_ext;
+            rename($filepath.$picture['name'], $filepath.$file);
+            $picture = $file;
+
+        }
+        $copyright = $_POST['copyright'];
+
+        $carsStore -> updateById($carID, [
+            "name" => "$name",
+            "handle" => "$handle",
+            "attributes" => [
+                "year" => "$year",
+                "manufacturer" => "$manufacturer",
+                "value" => "$value",
+            ],
+            "extras" => [
+                "dlc" => "$dlc",
+                "gconly" => "$gconly",
+                "lottery" => "$lottery"
+            ],
+            "graphics" => [
+                "picture" => "$picture",
+                "copyright" => "$copyright",
+            ],
+        ]);
+
+        header('Location: admin.php?site=cars&status=edited');
     }
 
 }else{

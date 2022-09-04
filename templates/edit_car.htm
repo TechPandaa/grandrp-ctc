@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="page-background flex flex-column">
+        <div class="title">
+            <h4>
+                <span><i class="primary rotate-52 fa-solid fa-slash"></i></span>
+                <span class="uppercase">%cars%</span>
+                <span class="uppercase">>> %edit%</span>
+            </h4>
+        </div>
+        <form class="flex flex-wrap flex-wrap-wrap" enctype="multipart/form-data" action="admin.php?site=cars&action=save" method="post">
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="manufacturers">%manufacturers%</label>
+                <input list="manufacturers" name="manufacturer" id="manufacturer" value="$manufacturer">
+                $manufacturers
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="name">%name%</label>
+                <input type="text" name="name" id="name" value="$name">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="name">%handle%</label>
+                <input type="text" name="handle" id="handle" value="$handle">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="year">%year%</label>
+                <input type="text" name="year" id="year" value="$year">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="value">%value%</label>
+                <input type="text" name="value" id="value" value="$value">
+            </div>
+            <div class="form-row flex flex-wrap flex-wrap-wrap flex-space-even flex-align-center">
+                <label class="uppercase bold" for="dlc">%extras%</label>
+                <div class="flex flex-wrap flex-nowrap flex-align-center">
+                    <input type="checkbox" name="dlc" id="dlc" $dlc>%dlc%
+                </div>
+                <div class="flex flex-wrap flex-nowrap flex-align-center">
+                    <input type="checkbox" name="gconly" id="gconly" $gconly>%gc_only%
+                </div>
+                <div class="flex flex-wrap flex-nowrap flex-align-center">
+                    <input type="checkbox" name="lottery" id="lottery" $lottery>%lottery%
+                </div>
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="picture">%picture%</label>
+                <input type="file" name="picture" id="picture">
+            </div>
+            <div class="form-row flex flex-column">
+                <label class="uppercase bold" for="copyright">%copyright%</label>
+                <input type="text" name="copyright" id="copyright" value="$copyright">
+            </div>
+            <input type="hidden" name="last" value="edit">
+            <input type="hidden" name="carID" value="$carID">
+            <input class="uppercase" type="submit" value="%save%">
+        </form>
+    </div>
+</div>
