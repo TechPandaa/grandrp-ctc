@@ -1,5 +1,6 @@
 <?php 
 
+include_once('_database.php');
 include_once('_settings.php');
 include_once('_functions.php');
 

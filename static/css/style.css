@@ -6,6 +6,7 @@
 @import url('forms.css');
 @import url('lists.css');
 @import url('inputs.css');
+@import url('users.css');
 
 .container {
     width: 50vw;
@@ -78,6 +79,7 @@ header > div.container > div#logo > a {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    text-decoration: none;
 }
 
 header > div.container > div#logo > a > img {
@@ -170,6 +172,7 @@ main > div.container > form#search input[type=text] {
     width: 100%;
     font-size: 1.3rem;
     text-align: center;
+    color: var(--grey);
     background: var(--white);
     border: 2px solid var(--light-grey);
     border-radius: 4px;

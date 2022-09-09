@@ -6,6 +6,7 @@ $language_array = array(
     'edit' => 'Bearbeiten',
     'email' => 'E-Mail',
     'grandid' => 'Grand ID',
+    'hello' => 'Hallo,',
     'id' => 'ID',
     'name' => 'Name',
     'new' => 'Hinzufügen',

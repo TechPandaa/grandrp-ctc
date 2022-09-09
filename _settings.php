@@ -5,15 +5,11 @@ require_once "./vendor/autoload.php";
 // Get all Session information about the loggedin admin
 session_start();
 
-// Database Stuff
-$databaseDirectory = __DIR__."/database";
-
-$configuration = [
-    "auto_cache" => true,
-    "cache_lifetime" => null,
-    "timeout" => false // deprecated! Set it to false!
-
-  ];
+if(isset($_SESSION['loggedin'])){
+    $loggedIn = TRUE;
+}else{
+    $loggedIn = FALSE;
+}
 
 // -- ERROR REPORTING -- //
 define('DEBUG', "ON"); // ON = development-mode | OFF = public mode

@@ -11,10 +11,20 @@ $_language->set_language($language);
 // -- Additional Database Functions -- //
 systeminc('database');
 
+// Filter REQUEST_URI for use with causes
+function page($page){
+	$page = str_replace('/', '', $_SERVER['REQUEST_URI']);
+	$page = str_replace('.php', '', $page);
+	return $page;
+}
+
+$page = page($_SERVER['REQUEST_URI']);
+
 // -- SITE VARIABLE -- //
 
 if(isset($_GET['site'])) $site = $_GET['site'];
-else $site = 'homepage';
+elseif(($page == 'index')) $site = 'homepage';
+else $site = 'overview';
 
 // -- Action Variable -- //
 
@@ -50,6 +60,11 @@ function generateSlug($string)
 	$slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
     return $slug;
 }
+
+// -- User Stuff -- //
+systeminc('users');
+if(isset($_SESSION['userID'])) $userID = $_SESSION['userID'];
+else $userID = '';
 
 // -- RANDOM PASSWORD CREATION -- //
 

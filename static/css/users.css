@@ -1,0 +1,44 @@
+div#user {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+div#user > div#avatar {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+div#user > div#avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+div#user > div#name {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+div#user > div#actions {
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+div#user > div#actions a {
+    color: #fff;
+    margin-left: 15px;
+}
+
+div#user > div#actions a:hover {
+    color: var(--secondary);
+}

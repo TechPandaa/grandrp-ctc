@@ -1,5 +1,6 @@
 <?php
 
+include_once('_database.php');
 include_once('_settings.php');
 include_once('_functions.php');
 
@@ -33,9 +34,7 @@ $_language->read_module('index');
                     </a>
                 </div>
                 <?php 
-                    if($_SESSION['loggedin']){
-                        include('user.php'); 
-                    }
+                    if($loggedIn) include('user.php');
                 ?>
             </div>
         </header>
