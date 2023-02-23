@@ -4,8 +4,6 @@ The CTC Tool - short for car thief calculator. You can input the handle of the c
 # Used Tools
 
 - Visual Studio Code
-- Digital Ocean VPS
-- Plesk Obsidian
 - Composer
 
 # Used Languages
